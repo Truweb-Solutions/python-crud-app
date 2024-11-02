@@ -20,7 +20,7 @@ This is a basic Flask application implementing CRUD (Create, Read, Update, Delet
 ## Setup
 
 1. **Clone the repository**:
-   ```bash
+   ```
    git clone <repository-url>
    cd CRUD_APP
    ```
@@ -30,7 +30,7 @@ This is a basic Flask application implementing CRUD (Create, Read, Update, Delet
 
 3. **Set Up Environment Variables**:
 
-   Create a `.env` file in the root directory with your MySQL credentials:
+- Create a `.env` file in the root directory with your MySQL credentials:
    ```env
    MYSQL_HOST=localhost
    MYSQL_USER=your_username
@@ -38,21 +38,21 @@ This is a basic Flask application implementing CRUD (Create, Read, Update, Delet
    MYSQL_DB=school_db
    ```
 
-4. **Install dependencies**:
-Create a requirements.txt file with the following content:
+4. **Install dependencies**
+- Create a requirements.txt file with the following content:
 
 ```
 Flask==3.0.3
 Flask-MySQLdb==2.0.0
 
 ```
-Then, run:
-   ```bash
+- Then, run:
+   ```
    pip install -r requirements.txt
    ```
 
 5. **Run the application**:
-   ```bash
+   ```
    python app.py
    ```
 
