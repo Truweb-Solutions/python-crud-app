@@ -1,20 +1,15 @@
 CREATE DATABASE IF NOT EXISTS `school_db`;
 
+use school_db;
+
 DROP TABLE IF EXISTS `students`;
 
 CREATE TABLE `students` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL
 );
-
-
-ALTER TABLE `students`
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 INSERT INTO `students` (`name`, `email`, `phone`) VALUES
 ('motech noel', 'mosesnoel02@gmail.com', '+255752541568'),
