@@ -27,7 +27,7 @@ This is a basic Flask application implementing CRUD (Create, Read, Update, Delet
 
 2. **Create and Configure the Database**
 
-Copy past the content of `schema.sql` into mysql workbench and run it
+Copy paste the content of `schema.sql` into mysql workbench and run it
 
 3. **Set Up Environment Variables**
 
