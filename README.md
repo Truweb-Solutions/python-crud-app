@@ -1,21 +1,21 @@
 
-# CRUD Flask MySQL Application
+# Flask CRUD Application with MySQL
 
-This is a basic CRUD (Create, Read, Update, Delete) application built using Python's Flask framework and MySQL for the database.
+This is a basic Flask application implementing CRUD (Create, Read, Update, Delete) functionality using a MySQL database to manage a list of students. This app includes routes to add, edit, view, and delete student records with basic HTML templates for rendering data.
 
 ## Features
 
-- **Create**: Add new records to the MySQL database.
-- **Read**: View all records in a list.
-- **Update**: Edit existing records.
-- **Delete**: Remove records from the database.
+- **Create**: Add a new student record.
+- **Read**: View a list of all student records.
+- **Update**: Modify existing student details.
+- **Delete**: Remove student records.
 
 ## Requirements
 
 - Python 3.x
 - Flask
+- Flask-MySQLdb
 - MySQL
-- MySQL Connector for Python
 
 ## Setup
 
@@ -25,29 +25,33 @@ This is a basic CRUD (Create, Read, Update, Delete) application built using Pyth
    cd CRUD_APP
    ```
 
-2. **Set up the database**:
-
+2. **Create and Configure the Database**:
+   
    - Create a new MySQL database:
      ```sql
-     CREATE DATABASE crud_app;
-     ```
-   - Import the schema:
-     ```bash
-     mysql -u username -p crud_app < schema.sql
+     CREATE DATABASE school_db;
+     USE school_db;
+     CREATE TABLE students (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       name VARCHAR(100),
+       email VARCHAR(100),
+       phone VARCHAR(15)
+     );
      ```
 
-3. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
+3. **Set Up Environment Variables**:
+
+   Create a `.env` file in the root directory with your MySQL credentials:
+   ```env
+   MYSQL_HOST=localhost
+   MYSQL_USER=your_username
+   MYSQL_PASSWORD=your_password
+   MYSQL_DB=school_db
    ```
 
-4. **Configure database connection**:
-   Update the database connection settings in `app.py` to match your MySQL credentials:
-   ```python
-   app.config['MYSQL_HOST'] = 'localhost'
-   app.config['MYSQL_USER'] = 'your_username'
-   app.config['MYSQL_PASSWORD'] = 'your_password'
-   app.config['MYSQL_DB'] = 'crud_app'
+4. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
    ```
 
 5. **Run the application**:
@@ -60,13 +64,32 @@ This is a basic CRUD (Create, Read, Update, Delete) application built using Pyth
 
 ## File Structure
 
-- `app.py`: Main application file with Flask routes and logic.
-- `schema.sql`: SQL file to set up the MySQL database.
-- `templates/`: Contains HTML files for the frontend.
+- `app.py`: Main application file with Flask routes and MySQL configurations.
+- `templates/`: Contains HTML templates for displaying and managing student records.
+  - `index.html`: Lists students and provides options for adding, updating, and deleting records.
 
 ## Usage
 
-1. **Create**: Use the form to add new entries to the database.
-2. **View**: See a list of all entries on the homepage.
-3. **Edit**: Click the edit button next to an entry to modify its details.
-4. **Delete**: Use the delete button to remove an entry.
+- **Homepage (`/`)**: Displays a list of students.
+- **Add Student (`/add`)**: POST endpoint to add a new student.
+- **Update Student (`/update`)**: POST endpoint to update a student’s details.
+- **Delete Student (`/delete/<id>`)**: DELETE endpoint to remove a student.
+
+## Example CRUD Operations
+
+### Add a Student
+
+1. Go to the homepage, fill in the student details in the form, and submit.
+2. After submission, the new student record will appear on the homepage list.
+
+### Update a Student
+
+1. Click the "Edit" button next to the student record.
+2. Modify the student's details and submit the form.
+3. The homepage will refresh with updated details.
+
+### Delete a Student
+
+1. Click the "Delete" button next to a student.
+2. The student record will be removed from the database.
+
