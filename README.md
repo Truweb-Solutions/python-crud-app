@@ -50,6 +50,14 @@ This is a basic Flask application implementing CRUD (Create, Read, Update, Delet
    ```
 
 4. **Install dependencies**:
+## Create a requirements.txt file with the following content:
+
+```
+Flask==2.0.1
+Flask-MySQLdb==0.2.0
+
+```
+Then, run:
    ```bash
    pip install -r requirements.txt
    ```
