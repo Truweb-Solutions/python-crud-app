@@ -53,8 +53,8 @@ This is a basic Flask application implementing CRUD (Create, Read, Update, Delet
 Create a requirements.txt file with the following content:
 
 ```
-Flask==2.0.1
-Flask-MySQLdb==0.2.0
+Flask==3.0.3
+Flask-MySQLdb==2.0.0
 
 ```
 Then, run:
