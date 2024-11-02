@@ -50,7 +50,7 @@ This is a basic Flask application implementing CRUD (Create, Read, Update, Delet
    ```
 
 4. **Install dependencies**:
-## Create a requirements.txt file with the following content:
+Create a requirements.txt file with the following content:
 
 ```
 Flask==2.0.1
