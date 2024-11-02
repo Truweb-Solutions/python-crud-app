@@ -25,10 +25,11 @@ This is a basic Flask application implementing CRUD (Create, Read, Update, Delet
    cd CRUD_APP
    ```
 
-2. **Create and Configure the Database**:
+2. **Create and Configure the Database**
+
 Copy past the content of `schema.sql` into mysql workbench and run it
 
-3. **Set Up Environment Variables**:
+3. **Set Up Environment Variables**
 
 Create a `.env` file in the root directory with your MySQL credentials:
    ```env
@@ -39,7 +40,8 @@ Create a `.env` file in the root directory with your MySQL credentials:
    ```
 
 4. **Install dependencies**
-Create a requirements.txt file with the following content:
+
+Create a requirements.txt file with the following content
 
 ```
 Flask==3.0.3
