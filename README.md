@@ -26,18 +26,7 @@ This is a basic Flask application implementing CRUD (Create, Read, Update, Delet
    ```
 
 2. **Create and Configure the Database**:
-   
-   - Create a new MySQL database:
-     ```sql
-     CREATE DATABASE school_db;
-     USE school_db;
-     CREATE TABLE students (
-       id INT AUTO_INCREMENT PRIMARY KEY,
-       name VARCHAR(100),
-       email VARCHAR(100),
-       phone VARCHAR(15)
-     );
-     ```
+- Copy past the content of `schema.sql` into mysql workbench and run it
 
 3. **Set Up Environment Variables**:
 
